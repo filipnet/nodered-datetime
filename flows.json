@@ -1,0 +1,538 @@
+[
+    {
+        "id": "1c64443d.8fc80c",
+        "type": "inject",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "b217e67c.6d4e48",
+                "4bb28cfe.355804",
+                "1e9923e5.c7d16c",
+                "ecf3effc.9fd55",
+                "c1f5bbe5.ac2ee8",
+                "96cf02e9.f711f",
+                "ef83f5a3.5c0a28",
+                "19366b64.274905",
+                "e757d7f9.077b38",
+                "9c307a3e.cc11c8"
+            ]
+        ]
+    },
+    {
+        "id": "b217e67c.6d4e48",
+        "type": "moment",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "dddd",
+        "locale": "de_DE",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 440,
+        "y": 220,
+        "wires": [
+            [
+                "dfea3114.42bb4"
+            ]
+        ]
+    },
+    {
+        "id": "dfea3114.42bb4",
+        "type": "change",
+        "z": "195d1c07.be54e4",
+        "name": "Set global variable weekday",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gv_now_weekday",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4bb28cfe.355804",
+        "type": "moment",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "YYYY",
+        "locale": "de_DE",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "5ff22b12.77ae54"
+            ]
+        ]
+    },
+    {
+        "id": "5ff22b12.77ae54",
+        "type": "change",
+        "z": "195d1c07.be54e4",
+        "name": "Set global variable year",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gv_now_year",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e9923e5.c7d16c",
+        "type": "moment",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "MM",
+        "locale": "de_DE",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "f0d6289a.caf7c8"
+            ]
+        ]
+    },
+    {
+        "id": "f0d6289a.caf7c8",
+        "type": "change",
+        "z": "195d1c07.be54e4",
+        "name": "Set global variable month",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gv_now_month",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ecf3effc.9fd55",
+        "type": "moment",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "DD",
+        "locale": "de_DE",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 440,
+        "y": 340,
+        "wires": [
+            [
+                "b97e1082.f909e"
+            ]
+        ]
+    },
+    {
+        "id": "b97e1082.f909e",
+        "type": "change",
+        "z": "195d1c07.be54e4",
+        "name": "Set global variable day",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gv_now_day",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1f5bbe5.ac2ee8",
+        "type": "moment",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH",
+        "locale": "de_DE",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "d296d364.0e7df"
+            ]
+        ]
+    },
+    {
+        "id": "d296d364.0e7df",
+        "type": "change",
+        "z": "195d1c07.be54e4",
+        "name": "Set global variable hour",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gv_now_hour",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96cf02e9.f711f",
+        "type": "moment",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "mm",
+        "locale": "de_DE",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 440,
+        "y": 420,
+        "wires": [
+            [
+                "b68bde62.e8264"
+            ]
+        ]
+    },
+    {
+        "id": "b68bde62.e8264",
+        "type": "change",
+        "z": "195d1c07.be54e4",
+        "name": "Set global variable minute",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gv_now_minute",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef83f5a3.5c0a28",
+        "type": "moment",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "SS",
+        "locale": "de_DE",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 440,
+        "y": 460,
+        "wires": [
+            [
+                "25eb19d8.b89636"
+            ]
+        ]
+    },
+    {
+        "id": "25eb19d8.b89636",
+        "type": "change",
+        "z": "195d1c07.be54e4",
+        "name": "Set global variable weekday",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gv_now_second",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19366b64.274905",
+        "type": "moment",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "msg",
+        "inTz": "Europe/Paris",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "ss",
+        "locale": "de_DE",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Paris",
+        "x": 440,
+        "y": 500,
+        "wires": [
+            [
+                "94a0eca5.2129f"
+            ]
+        ]
+    },
+    {
+        "id": "94a0eca5.2129f",
+        "type": "change",
+        "z": "195d1c07.be54e4",
+        "name": "Set global variable second",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gv_now_second",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e757d7f9.077b38",
+        "type": "function",
+        "z": "195d1c07.be54e4",
+        "name": "Create timestamp out of gv",
+        "func": "msg.weekday = global.get(\"gv_now_weekday\");\nmsg.year = global.get(\"gv_now_year\");\nmsg.month = global.get(\"gv_now_month\");\nmsg.day = global.get(\"gv_now_day\");\nmsg.hour = global.get(\"gv_now_hour\");\nmsg.minute = global.get(\"gv_now_minute\");\nmsg.second = global.get(\"gv_now_second\");\nmsg.timestamp = msg.weekday+\", \"+msg.day+\".\"+msg.month+\".\"+msg.year+\" \"+msg.hour+\":\"+msg.minute+\":\"+msg.second;\n\nmsg.payload = msg.timestamp;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 460,
+        "y": 120,
+        "wires": [
+            [
+                "612ff6c5.c623e8"
+            ]
+        ]
+    },
+    {
+        "id": "612ff6c5.c623e8",
+        "type": "mqtt out",
+        "z": "195d1c07.be54e4",
+        "name": "",
+        "topic": "home/datetime",
+        "qos": "2",
+        "retain": "",
+        "broker": "89c47141.2fd35",
+        "x": 720,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9c307a3e.cc11c8",
+        "type": "function",
+        "z": "195d1c07.be54e4",
+        "name": "Create YYYY-MM-DD",
+        "func": "msg.weekday = global.get(\"gv_now_weekday\");\nmsg.year = global.get(\"gv_now_year\");\nmsg.month = global.get(\"gv_now_month\");\nmsg.day = global.get(\"gv_now_day\");\nmsg.hour = global.get(\"gv_now_hour\");\nmsg.minute = global.get(\"gv_now_minute\");\nmsg.second = global.get(\"gv_now_second\");\nmsg.timestamp = msg.year+\"-\"+msg.month+\"-\"+msg.day+\" \"+msg.hour+\":\"+msg.minute+\":\"+msg.second;\n\nmsg.payload = msg.timestamp;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 180,
+        "wires": [
+            [
+                "6ade6ea1.36bfe"
+            ]
+        ]
+    },
+    {
+        "id": "6ade6ea1.36bfe",
+        "type": "change",
+        "z": "195d1c07.be54e4",
+        "name": "Set global variable timestamp",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gv_now_timestamp",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89c47141.2fd35",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "mqtt.tld.de",
+        "broker": "mqtt.tld.de",
+        "port": "8883",
+        "tls": "dab1e87b.a61058",
+        "clientid": "",
+        "usetls": true,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "dab1e87b.a61058",
+        "type": "tls-config",
+        "z": "",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false
+    }
+]
